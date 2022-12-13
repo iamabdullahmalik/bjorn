@@ -152,7 +152,7 @@ export const Home = () => {
   return (
     <HomeWrapper backgroundColor={bgColor}>
       <NavWrapper>
-        <BjornTextTop to='/'>Bjornverlinde</BjornTextTop>
+        <BjornTextTop to='/'>Bjornverlinde !!!!!</BjornTextTop>
         <LinkWrapper>
           <StyledLink to={'/work'}>{t('Work')}, </StyledLink>
           <StyledLink to={'/studio'}>{t('Studio')}</StyledLink>
