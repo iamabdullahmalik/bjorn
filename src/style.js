@@ -13,7 +13,7 @@ export const fade = keyframes`
 
 export const fadeDelay = css`
   opacity: 0;
-  animation: ${fade} 1s ease-in 1.5s forwards;
+  animation: ${fade} 3s ease-in 3.5s forwards;
 `;
 
 export const BjornTextTop = styled(Link)`
@@ -63,12 +63,13 @@ export const BjornTextTopMobile = styled(Link)`
   z-index: 5000;
   position: fixed;
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : 'white'};
+    props.backgroundColor ? props.backgroundColor : '#e3e3e3'};
   width: 100vw;
   display: flex;
   align-items: center;
   text-decoration: none;
   line-height: 0.9;
   font-family: Base Gotesk, sans-serif;
-  transition: background-color 0.3s ease-in;
 `;
+
+//transition: background-color 0.3s ease-in;

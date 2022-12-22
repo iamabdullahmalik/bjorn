@@ -124,7 +124,8 @@ export const Home = () => {
     setActiveWork(Math.round(scrollDevided));
   };
 
-  const colors = ['white', 'green', 'blue', 'red'];
+  //const colors = ['white', 'green', 'blue', 'red'];
+  const colors = ['#e3e3e3', '#e3e3e3', '#e3e3e3', '#e3e3e3'];
 
   useEffect(() => {
     const dividedNr = Math.floor(activeWork / 4);
@@ -137,7 +138,7 @@ export const Home = () => {
 
   useEffect(() => {
     if (activeWork >= works.length) {
-      return;
+      //return;
     }
     const scroll = setInterval(
       () => workRefs[activeWork].current.scrollIntoView(),
@@ -152,7 +153,7 @@ export const Home = () => {
   return (
     <HomeWrapper backgroundColor={bgColor}>
       <NavWrapper>
-        <BjornTextTop to='/'>Bjornverlinde !!!!!</BjornTextTop>
+        <BjornTextTop to='/'>Bjornverlinde</BjornTextTop>
         <LinkWrapper>
           <StyledLink to={'/work'}>{t('Work')}, </StyledLink>
           <StyledLink to={'/studio'}>{t('Studio')}</StyledLink>

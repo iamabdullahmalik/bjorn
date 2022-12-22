@@ -12,8 +12,8 @@ const AproachWrapper = styled.div`
 `;
 
 const AproachText = styled.p`
-  font-size: 2.5rem;
   font-size: 1.25vw;
+  font-size: 2.8rem;
   margin-bottom: 2rem;
 `;
 

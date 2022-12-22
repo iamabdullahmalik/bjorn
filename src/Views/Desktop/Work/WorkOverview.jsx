@@ -63,7 +63,7 @@ export const WorkOverview = () => {
       <NavWrapper>
         <BjornTextTop to='/'>{t('Work')}</BjornTextTop>
         <LinkWrapper>
-          <StyledLink to={'/work'}>Index ,</StyledLink>
+          <StyledLink to={'/work'}>Index,</StyledLink>
           <StyledLink to={'/overview'}>
             {' '}
             <Underline>{t('Overview')}</Underline>

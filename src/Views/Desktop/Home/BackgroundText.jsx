@@ -14,7 +14,7 @@ const TextWrapper = styled.div`
 `;
 
 const LogoImg = styled.img`
-  width: 60%;
+  width: 65%;
 `;
 
 export const BackgroundText = () => {

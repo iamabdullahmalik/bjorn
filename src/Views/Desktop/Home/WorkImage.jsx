@@ -15,7 +15,7 @@ const ImageWrapper = styled.div`
 const FirstImage = styled.img`
   grid-column: 2/4;
   grid-row: 1;
-  width: 90%;
+  width: 110%;
   aspect-ratio: 3/2;
   object-fit: contain;
   align-self: center;

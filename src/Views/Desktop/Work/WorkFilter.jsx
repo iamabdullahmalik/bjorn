@@ -23,7 +23,7 @@ const FilterWrapper = styled.div`
   }
 
   span{
-    margin-right: 0.3rem;
+    margin-right: 0.8rem;
   }
 `;
 
@@ -100,7 +100,7 @@ export const WorkFilter = ({ setNewFilter, filter }) => {
   return (
     <FilterWrapper
       onClick={() => setNewFilter('all')}>
-     <p> + Filter</p>
+     <span>+</span><p>  Filter</p>
     </FilterWrapper>
   );
 };
