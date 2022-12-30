@@ -63,7 +63,7 @@ export const BjornTextTopMobile = styled(Link)`
   z-index: 5000;
   position: fixed;
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : '#e3e3e3'};
+    props.backgroundcolor ? props.backgroundcolor : '#e3e3e3'};
   width: 100vw;
   display: flex;
   align-items: center;

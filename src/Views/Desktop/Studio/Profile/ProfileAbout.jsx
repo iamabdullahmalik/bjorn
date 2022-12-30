@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
+import styled , { keyframes } from 'styled-components';
 
 const StudioProfileWrapper = styled.div`
   grid-column: 2/5;
@@ -36,6 +36,23 @@ const StudioProfileText = styled.p`
   height: max-content;
 `;
 
+const Fade = styled.p`
+  font-size: 1.4vw;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  pointer-events: none;
+  color: inherit;
+  mix-blend-mode: difference;
+  color: #fff;
+  z-index: 50;
+  grid-column: 1/3;
+  height: max-content;
+  animation: ${props => props.out ? fadeIn : fadeOut} 1s linear;
+  transition:visibility 1s linear;
+  visibility: ${props => props.out ? "visible" : "hidden"} ;
+`;
+
+
 const ReadMoreButton = styled.button`
   font-size: 1.4vw;
   font-size: 2.8rem;
@@ -52,10 +69,42 @@ const HoverSpan = styled.span`
   pointer-events: auto;
 `;
 
+const fadeIn = keyframes`
+  from {
+    transform: scale(.25);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(.25);
+    opacity: 0;
+  }
+`;
+
 export const ProfileAbout = () => {
   const [readMore, setReadMore] = useState(false);
+  const [fade, setFade] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState(null);
   const { t } = useTranslation();
+
+  const toggleReadMore = () => {
+    setFade(!fade);
+    setTimeout(() => (
+      setReadMore(!readMore)
+    ),1000)
+  }
   return (
     <StudioProfileWrapper>
       <StudioProfileTextWrapper image={backgroundImage}>
@@ -76,11 +125,11 @@ export const ProfileAbout = () => {
           purit fame bowie.
         </StudioProfileText>
         {readMore ? (
-          <StudioProfileText>{t('AboutMore')}</StudioProfileText>
-        ) : (
+          <Fade out={fade}>{t('AboutMore')}</Fade>
+       ) : (
           ''
         )}
-        <ReadMoreButton onClick={() => setReadMore(!readMore)}>
+        <ReadMoreButton onClick={() => toggleReadMore()}>
           {readMore ? `- ${t('ReadLess')}` : `+ ${t('ReadMore')}`}
         </ReadMoreButton>
       </StudioProfileTextWrapper>

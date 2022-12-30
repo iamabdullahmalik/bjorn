@@ -17,7 +17,7 @@ const HomeWrapper = styled.div`
   height: ${window.innerHeight}px;
   max-height: 100vh;
   grid-gap: 2rem;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
   transition: all 0.3s ease-in;
 `;
 
@@ -36,7 +36,7 @@ const Footer = styled.a`
 
 const WorkWrapper = styled.div`
   scroll-behavior: smooth;
-  max-height: 85vh;
+  max-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -65,7 +65,10 @@ const ShowReelWrapper = styled.div`
   align-self: center;
   display: flex;
   flex-flow: column;
-  z-index: 10;
+  position:absolute;
+  bottom:0;
+  top:0;
+  height:100%;
 `;
 
 const NavWrapper = styled.div`
@@ -151,7 +154,7 @@ export const Home = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <HomeWrapper backgroundColor={bgColor}>
+    <HomeWrapper backgroundcolor={bgColor}>
       <NavWrapper>
         <BjornTextTop to='/'>Bjornverlinde</BjornTextTop>
         <LinkWrapper>
@@ -175,6 +178,7 @@ export const Home = () => {
             );
           })}
         </WorkWrapper>
+        {/* <WorkWrapper ref={scrollRef} onScroll={(e) => scrollDirectionDiv(e)}></WorkWrapper> */}
       </ShowReelWrapper>
       <BackgroundText />
       <WorkCount>

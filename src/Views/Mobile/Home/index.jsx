@@ -13,7 +13,7 @@ const HomeWrapper = styled(Div100vh)`
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
   transition: background-color 0.3s ease-in;
 `;
 
@@ -114,9 +114,9 @@ export const Home = () => {
   }, [activeWork]);
   const { t } = useTranslation();
   return (
-    <HomeWrapper vh={vh} backgroundColor={bgColor}>
+    <HomeWrapper vh={vh} backgroundcolor={bgColor}>
       <TopWrapper>
-        <BjornTextTopMobile backgroundColor={bgColor} to='/'>
+        <BjornTextTopMobile backgroundcolor={bgColor} to='/'>
           Bjorn Verlinde
         </BjornTextTopMobile>
         <p>
