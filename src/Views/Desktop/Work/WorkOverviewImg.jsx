@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const OverviewImgWrapper = styled.div`
   margin: 30vh 0;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-flow: column;
   align-items: center;

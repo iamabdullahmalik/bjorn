@@ -8,16 +8,17 @@ const AproachWrapper = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  height: 75%;
+  height: 50%;
 `;
 
 const AproachText = styled.p`
-  font-size: 1.25vw;
   font-size: 2.8rem;
+  font-size: 1.25vw;
   margin-bottom: 2rem;
 `;
 
 const AproachTitle = styled.span`
+  font-size: 2.6rem;
   text-transform: uppercase;
   font-family: Base Grotesk, sans-serif;
 `;

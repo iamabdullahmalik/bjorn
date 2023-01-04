@@ -48,7 +48,7 @@ export const BackToHomeLink = styled(StyledLink)`
   grid-row: 1;
   justify-self: flex-end;
   align-self: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
   font-family: Base Gotesk, sans-serif;
   z-index: 1000;
   font-size: 1vw;
