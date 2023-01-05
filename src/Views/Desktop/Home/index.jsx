@@ -122,6 +122,10 @@ export const Home = () => {
   const { x, y } = useMousePos();
 
   const scrollDirectionDiv = (e) => {
+    if(e.target.scrollTop > (e.target.scrollHeight - (e.target.scrollHeight / 100) * 15)){
+      //scrollRef.current.scrollTo(0,0);
+      window.location.reload(true)
+    }
     const devideBy = scrollRef.current.scrollHeight / works.length;
     const scrollDevided = e.target.scrollTop / devideBy + 1;
     setActiveWork(Math.round(scrollDevided));
@@ -140,9 +144,9 @@ export const Home = () => {
   }, [activeWork]);
 
   useEffect(() => {
-    if (activeWork >= works.length) {
-      //return;
-    }
+    // if (activeWork >= works.length) {
+    //   return;
+    // }
     const scroll = setInterval(
       () => workRefs[activeWork].current.scrollIntoView(),
       10000
@@ -178,7 +182,6 @@ export const Home = () => {
             );
           })}
         </WorkWrapper>
-        {/* <WorkWrapper ref={scrollRef} onScroll={(e) => scrollDirectionDiv(e)}></WorkWrapper> */}
       </ShowReelWrapper>
       <BackgroundText />
       <WorkCount>
